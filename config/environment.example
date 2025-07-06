@@ -1,0 +1,143 @@
+# Bible Podcaster - Environment Variables
+# Copy this file to .env and fill in your actual values
+
+# =============================================================================
+# Application Settings
+# =============================================================================
+
+# Environment: development, staging, production
+ENVIRONMENT=development
+
+# Debug mode
+DEBUG=true
+
+# Project paths (relative to project root)
+DATA_DIR=data
+OUTPUT_DIR=output
+LOGS_DIR=logs
+
+# =============================================================================
+# API Keys
+# =============================================================================
+
+# OpenAI API key for text processing
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Anthropic API key (alternative to OpenAI)
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# Eleven Labs API key for audio generation
+ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
+
+# YouTube Data API key
+YOUTUBE_API_KEY=your_youtube_api_key_here
+
+# =============================================================================
+# YouTube OAuth (for video upload)
+# =============================================================================
+
+# YouTube OAuth client ID
+YOUTUBE_CLIENT_ID=your_youtube_client_id_here
+
+# YouTube OAuth client secret
+YOUTUBE_CLIENT_SECRET=your_youtube_client_secret_here
+
+# =============================================================================
+# Audio Settings
+# =============================================================================
+
+# Audio sample rate (Hz)
+AUDIO_SAMPLE_RATE=22050
+
+# Audio output format (mp3, wav, etc.)
+AUDIO_FORMAT=mp3
+
+# Audio quality (low, medium, high)
+AUDIO_QUALITY=high
+
+# =============================================================================
+# Video Settings
+# =============================================================================
+
+# Video resolution (WxH format)
+VIDEO_RESOLUTION=1920x1080
+
+# Video frames per second
+VIDEO_FPS=30
+
+# Video output format
+VIDEO_FORMAT=mp4
+
+# =============================================================================
+# Image Settings
+# =============================================================================
+
+# Image dimensions
+IMAGE_WIDTH=1920
+IMAGE_HEIGHT=1080
+
+# Image format (png, jpg, etc.)
+IMAGE_FORMAT=png
+
+# =============================================================================
+# Text Processing Settings
+# =============================================================================
+
+# Maximum text length for processing
+MAX_TEXT_LENGTH=10000
+
+# Minimum text length for processing
+MIN_TEXT_LENGTH=100
+
+# =============================================================================
+# Logging Settings
+# =============================================================================
+
+# Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+LOG_LEVEL=INFO
+
+# Log format string
+LOG_FORMAT=%(asctime)s - %(name)s - %(levelname)s - %(message)s
+
+# =============================================================================
+# Pipeline Settings
+# =============================================================================
+
+# Pipeline timeout in seconds
+PIPELINE_TIMEOUT=3600
+
+# Number of retry attempts
+RETRY_ATTEMPTS=3
+
+# Stage enablement
+PIPELINE_TEXT_PROCESSING_ENABLED=true
+PIPELINE_AUDIO_GENERATION_ENABLED=true
+PIPELINE_IMAGE_GENERATION_ENABLED=true
+PIPELINE_VIDEO_CREATION_ENABLED=true
+PIPELINE_YOUTUBE_UPLOAD_ENABLED=true
+
+# Parallel processing
+PIPELINE_MAX_WORKERS=4
+
+# File management
+PIPELINE_KEEP_INTERMEDIATE_FILES=false
+
+# =============================================================================
+# Web Interface (Optional)
+# =============================================================================
+
+# Web interface host
+WEB_HOST=localhost
+
+# Web interface port
+WEB_PORT=8000
+
+# =============================================================================
+# Development Settings
+# =============================================================================
+
+# Set to true to enable additional debugging features
+DEVELOPMENT_MODE=true
+
+# Set to true to use mock services for testing
+USE_MOCK_SERVICES=false 
