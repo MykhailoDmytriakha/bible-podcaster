@@ -34,10 +34,10 @@
   - [x] **Validation**: Result should be created config.py for settings, environment variables should be setup (API keys, etc.), global logging is configured
   
 ### Work Package 1.2: Core Architecture
-- [ ] **Task 1.2.1**: Design core interfaces
-  - [ ] **Subtask 1.2.1.1**: Define abstract base classes
-  - [ ] **Subtask 1.2.1.2**: Create data models
-  - [ ] **Subtask 1.2.1.3**: Design pipeline interfaces
+- [x] **Task 1.2.1**: Design core interfaces
+  - [x] **Subtask 1.2.1.1**: Define abstract base classes
+  - [x] **Subtask 1.2.1.2**: Create data models
+  - [x] **Subtask 1.2.1.3**: Design pipeline interfaces
 
 ---
 
