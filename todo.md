@@ -20,24 +20,24 @@
 **Цель**: Подготовка основы проекта и инфраструктуры
 
 ### Work Package 1.1: Project Infrastructure
-- **Task 1.1.1**: Setup project structure
-  - **Subtask 1.1.1.1**: Create directory structure
-  - **Subtask 1.1.1.2**: Initialize git repository
-  - **Subtask 1.1.1.3**: Create requirements.txt
-  - **Subtask 1.1.1.4**: Setup virtual environment
-  - **Validation**: Result should be created folder, git repo linked to origin repo, requirements.txt should be created, venv should be created, python version should be 3.12
-  
-- **Task 1.1.2**: Configuration management
-  - **Subtask 1.1.2.1**: Create config.py for settings
-  - **Subtask 1.1.2.2**: Setup environment variables
-  - **Subtask 1.1.2.3**: Create logging configuration
-  - **Validation**: Result should be created config.py for settings, environment variables should be setup (API keys, etc.), global logging is configured
+- [x] **Task 1.1.1**: Setup project structure
+  - [x] **Subtask 1.1.1.1**: Create directory structure
+  - [x] **Subtask 1.1.1.2**: Initialize git repository
+  - [x] **Subtask 1.1.1.3**: Create requirements.txt
+  - [x] **Subtask 1.1.1.4**: Setup virtual environment
+  - [x] **Validation**: Result should be created folder, git repo linked to origin repo, requirements.txt should be created, venv should be created, python version should be 3.12
+
+- [x] **Task 1.1.2**: Configuration management
+  - [x] **Subtask 1.1.2.1**: Create config.py for settings
+  - [x] **Subtask 1.1.2.2**: Setup environment variables
+  - [x] **Subtask 1.1.2.3**: Create logging configuration
+  - [x] **Validation**: Result should be created config.py for settings, environment variables should be setup (API keys, etc.), global logging is configured
   
 ### Work Package 1.2: Core Architecture
-- **Task 1.2.1**: Design core interfaces
-  - **Subtask 1.2.1.1**: Define abstract base classes
-  - **Subtask 1.2.1.2**: Create data models
-  - **Subtask 1.2.1.3**: Design pipeline interfaces
+- [ ] **Task 1.2.1**: Design core interfaces
+  - [ ] **Subtask 1.2.1.1**: Define abstract base classes
+  - [ ] **Subtask 1.2.1.2**: Create data models
+  - [ ] **Subtask 1.2.1.3**: Design pipeline interfaces
 
 ---
 
