@@ -38,6 +38,7 @@
   - [x] **Subtask 1.2.1.1**: Define abstract base classes
   - [x] **Subtask 1.2.1.2**: Create data models
   - [x] **Subtask 1.2.1.3**: Design pipeline interfaces
+  - [x] **Validation**: Abstract base classes, data models, and pipeline interfaces are defined and documented in codebase.
 
 ---
 
@@ -46,39 +47,46 @@
 
 ### Work Package 2.1: Text Analysis & Context Gathering
 - **Task 2.1.1**: Implement context collection
+  - **Validation**: Система способна анализировать входной текст, извлекать ключевые слова, находить библейские ссылки и обогащать контекст дополнительной информацией. Для заданного текста возвращается структурированный контекст.
   - **Subtask 2.1.1.1**: Create biblical context analyzer
   - **Subtask 2.1.1.2**: Implement keyword extraction
   - **Subtask 2.1.1.3**: Add verse reference lookup
   - **Subtask 2.1.1.4**: Create context enrichment system
   
 - **Task 2.1.2**: Thought completeness checker
+  - **Validation**: Для любого текста система может вычислить степень завершённости мысли, предоставить обратную связь и предложить улучшения. Неполные мысли корректно выявляются и улучшаются.
   - **Subtask 2.1.2.1**: Implement completeness scoring
   - **Subtask 2.1.2.2**: Create feedback system for incomplete thoughts
   - **Subtask 2.1.2.3**: Add iterative improvement mechanism
 
 ### Work Package 2.2: Structure Planning
 - **Task 2.2.1**: Plan generation system
+  - **Validation**: На основе входного текста система строит структурированный план (outline), выделяет ключевые пункты и анализирует логическую последовательность. План соответствует логике и тематике исходного текста.
   - **Subtask 2.2.1.1**: Create outline generator
   - **Subtask 2.2.1.2**: Implement key points extraction
   - **Subtask 2.2.1.3**: Add logical flow analyzer
   
 - **Task 2.2.2**: Content organization
+  - **Validation**: Система делит текст на секции, выстраивает иерархию и балансирует объём контента между разделами. Результат — структурированный, сбалансированный текст с чёткими разделами.
   - **Subtask 2.2.2.1**: Create section divider
   - **Subtask 2.2.2.2**: Implement hierarchical structure
   - **Subtask 2.2.2.3**: Add content balancing algorithm
 
 ### Work Package 2.3: Text Generation & Refinement
 - **Task 2.3.1**: Section text generation
+  - **Validation**: Для каждой секции плана генерируется связный текст, который можно расширять и проверять на стилистическую целостность. Все секции имеют согласованный стиль.
   - **Subtask 2.3.1.1**: Implement per-section text creator
   - **Subtask 2.3.1.2**: Create content expansion system
   - **Subtask 2.3.1.3**: Add style consistency checker
   
 - **Task 2.3.2**: Transition creation
+  - **Validation**: Между секциями автоматически создаются переходные фразы, обеспечивающие плавность и связность текста. Переходы проходят проверку на логическую и стилистическую согласованность.
   - **Subtask 2.3.2.1**: Build transition phrase generator
   - **Subtask 2.3.2.2**: Implement smooth flow connector
   - **Subtask 2.3.2.3**: Add coherence validator
   
 - **Task 2.3.3**: Final text assembly
+  - **Validation**: Все секции и переходы объединяются в финальный текст, который проходит итоговую проверку качества и получает оценку (scoring).
   - **Subtask 2.3.3.1**: Create text combiner
   - **Subtask 2.3.3.2**: Implement final review system
   - **Subtask 2.3.3.3**: Add quality scoring
@@ -90,23 +98,27 @@
 
 ### Work Package 3.1: Eleven Labs Integration
 - **Task 3.1.1**: API integration
+  - **Validation**: Система успешно подключается к Eleven Labs API, проходит аутентификацию, корректно обрабатывает ошибки и соблюдает лимиты запросов.
   - **Subtask 3.1.1.1**: Setup Eleven Labs client
   - **Subtask 3.1.1.2**: Implement authentication
   - **Subtask 3.1.1.3**: Create error handling
   - **Subtask 3.1.1.4**: Add rate limiting
   
 - **Task 3.1.2**: Voice configuration
+  - **Validation**: Можно выбрать и настроить голосовую модель, параметры речи и кастомизацию голоса. Все настройки применяются корректно.
   - **Subtask 3.1.2.1**: Select appropriate voice models
   - **Subtask 3.1.2.2**: Configure speech parameters
   - **Subtask 3.1.2.3**: Implement voice customization
-  
+
 ### Work Package 3.2: Audio Processing
 - **Task 3.2.1**: Audio generation pipeline
+  - **Validation**: Система преобразует текст в аудио, поддерживает пакетную обработку и отслеживает прогресс. Для каждого текста создаётся аудиофайл.
   - **Subtask 3.2.1.1**: Create text-to-speech processor
   - **Subtask 3.2.1.2**: Implement batch processing
   - **Subtask 3.2.1.3**: Add progress tracking
   
 - **Task 3.2.2**: Audio enhancement
+  - **Validation**: Аудиофайлы проходят обработку для снижения шума, нормализации громкости и проверки качества. На выходе — чистый, сбалансированный звук.
   - **Subtask 3.2.2.1**: Implement noise reduction
   - **Subtask 3.2.2.2**: Add volume normalization
   - **Subtask 3.2.2.3**: Create audio quality validator
@@ -118,11 +130,13 @@
 
 ### Work Package 4.1: Image Creation System
 - **Task 4.1.1**: Text-to-image generator
+  - **Validation**: Система генерирует изображения по текстовому описанию, используя выбранную библиотеку/API, с применением шаблонов стиля.
   - **Subtask 4.1.1.1**: Choose image generation API/library
   - **Subtask 4.1.1.2**: Implement prompt engineering
   - **Subtask 4.1.1.3**: Create style templates
   
 - **Task 4.1.2**: Text overlay system
+  - **Validation**: На изображение корректно накладывается текст с управлением шрифтами, позиционированием и переносом строк.
   - **Subtask 4.1.2.1**: Implement text rendering
   - **Subtask 4.1.2.2**: Create font management
   - **Subtask 4.1.2.3**: Add text positioning algorithms
@@ -130,11 +144,13 @@
 
 ### Work Package 4.2: Visual Enhancement
 - **Task 4.2.1**: Image composition
+  - **Validation**: Изображения компонуются с использованием шаблонов, фильтров и брендовых элементов.
   - **Subtask 4.2.1.1**: Create background templates
   - **Subtask 4.2.1.2**: Implement image filters
   - **Subtask 4.2.1.3**: Add branding elements
   
 - **Task 4.2.2**: Quality assurance
+  - **Validation**: Картинки проходят автоматическую проверку качества, оптимизацию разрешения и преобразование в нужный формат.
   - **Subtask 4.2.2.1**: Implement image quality checker
   - **Subtask 4.2.2.2**: Create resolution optimizer
   - **Subtask 4.2.2.3**: Add format converter
@@ -146,17 +162,20 @@
 
 ### Work Package 5.1: Video Assembly
 - **Task 5.1.1**: Video composition pipeline
+  - **Validation**: Система собирает видео из аудио и изображений, синхронизирует дорожки и кодирует видеофайл.
   - **Subtask 5.1.1.1**: Setup video processing library (FFmpeg)
   - **Subtask 5.1.1.2**: Implement audio-video synchronization
   - **Subtask 5.1.1.3**: Create video encoder
   
 - **Task 5.1.2**: Video enhancement
+  - **Validation**: К видео добавляются переходы, эффекты, оптимизация и создаётся миниатюра (thumbnail).
   - **Subtask 5.1.2.1**: Add transitions and effects
   - **Subtask 5.1.2.2**: Implement video optimization
   - **Subtask 5.1.2.3**: Create thumbnail generator
 
 ### Work Package 5.2: Video Quality Control
 - **Task 5.2.1**: Quality validation
+  - **Validation**: Видео проходит автоматическую проверку качества, длительности и соответствия формату.
   - **Subtask 5.2.1.1**: Implement video quality checker
   - **Subtask 5.2.1.2**: Create duration validator
   - **Subtask 5.2.1.3**: Add format compliance checker
@@ -168,22 +187,26 @@
 
 ### Work Package 6.1: YouTube API Integration
 - **Task 6.1.1**: API setup
+  - **Validation**: Система подключается к YouTube Data API, проходит OAuth-аутентификацию и может загружать видео.
   - **Subtask 6.1.1.1**: Configure YouTube Data API
   - **Subtask 6.1.1.2**: Implement OAuth authentication
   - **Subtask 6.1.1.3**: Create upload client
   
 - **Task 6.1.2**: Video upload system
+  - **Validation**: Видео успешно загружаются на YouTube с корректной метаинформацией и отслеживанием прогресса.
   - **Subtask 6.1.2.1**: Implement video uploader
   - **Subtask 6.1.2.2**: Create metadata generator
   - **Subtask 6.1.2.3**: Add upload progress tracking
 
 ### Work Package 6.2: Content Management
 - **Task 6.2.1**: Video metadata
+  - **Validation**: Для каждого видео автоматически генерируются заголовки, описания, теги и категории.
   - **Subtask 6.2.1.1**: Auto-generate titles
   - **Subtask 6.2.1.2**: Create descriptions
   - **Subtask 6.2.1.3**: Add tags and categories
   
 - **Task 6.2.2**: Publishing workflow
+  - **Validation**: Система поддерживает планирование публикаций, отслеживает статус и умеет восстанавливаться после ошибок.
   - **Subtask 6.2.2.1**: Implement scheduling system
   - **Subtask 6.2.2.2**: Create publication status tracking
   - **Subtask 6.2.2.3**: Add error recovery
@@ -195,22 +218,26 @@
 
 ### Work Package 7.1: Main Pipeline
 - **Task 7.1.1**: Pipeline orchestration
+  - **Validation**: Главный контроллер пайплайна координирует все этапы, корректно обрабатывает ошибки и восстанавливает процесс.
   - **Subtask 7.1.1.1**: Create main pipeline controller
   - **Subtask 7.1.1.2**: Implement step coordination
   - **Subtask 7.1.1.3**: Add error handling and recovery
   
 - **Task 7.1.2**: Data flow management
+  - **Validation**: Данные корректно передаются между этапами, состояние пайплайна отслеживается, реализованы чекпоинты.
   - **Subtask 7.1.2.1**: Create data passing system
   - **Subtask 7.1.2.2**: Implement state management
   - **Subtask 7.1.2.3**: Add checkpointing
 
 ### Work Package 7.2: User Interface
 - **Task 7.2.1**: CLI interface
+  - **Validation**: Пользователь может запускать пайплайн через CLI, настраивать параметры и видеть прогресс.
   - **Subtask 7.2.1.1**: Create command-line interface
   - **Subtask 7.2.1.2**: Add configuration options
   - **Subtask 7.2.1.3**: Implement progress display
   
 - **Task 7.2.2**: Web interface (optional)
+  - **Validation**: Веб-интерфейс позволяет запускать пайплайн, загружать файлы и отслеживать статус.
   - **Subtask 7.2.2.1**: Create simple web form
   - **Subtask 7.2.2.2**: Add file upload capability
   - **Subtask 7.2.2.3**: Implement status dashboard
@@ -222,22 +249,26 @@
 
 ### Work Package 8.1: Testing
 - **Task 8.1.1**: Unit testing
+  - **Validation**: Для всех компонентов написаны юнит-тесты, тесты проходят успешно.
   - **Subtask 8.1.1.1**: Create test framework
   - **Subtask 8.1.1.2**: Write component tests
   - **Subtask 8.1.1.3**: Add integration tests
   
 - **Task 8.1.2**: End-to-end testing
+  - **Validation**: Система проходит сквозные, нагрузочные и производительные тесты.
   - **Subtask 8.1.2.1**: Create full pipeline tests
   - **Subtask 8.1.2.2**: Add performance tests
   - **Subtask 8.1.2.3**: Implement load testing
 
 ### Work Package 8.2: Deployment
 - **Task 8.2.1**: Production setup
+  - **Validation**: Система развёрнута в production, настроен мониторинг, логирование и аналитика.
   - **Subtask 8.2.1.1**: Create deployment scripts
   - **Subtask 8.2.1.2**: Setup monitoring
   - **Subtask 8.2.1.3**: Add logging and analytics
   
 - **Task 8.2.2**: Documentation
+  - **Validation**: Пользовательская и API-документация написаны, есть гайд по устранению проблем.
   - **Subtask 8.2.2.1**: Create user documentation
   - **Subtask 8.2.2.2**: Write API documentation
   - **Subtask 8.2.2.3**: Add troubleshooting guide
@@ -248,6 +279,7 @@
 
 ### Work Package 9.1: Support for other platforms
 - **Task 9.1.1**: Suppport for spotify
+  - **Validation**: Система может публиковать подкасты на Spotify, проходит аутентификацию и загружает контент.
 ---
 
 ## Dependencies & Critical Path
