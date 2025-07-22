@@ -125,48 +125,8 @@ class AppSettings(BaseSettings):
         return self.environment == Environment.DEVELOPMENT
 
 
-class PipelineSettings(BaseSettings):
-    """Pipeline-specific settings."""
-    
-    # Stage enablement
-    text_processing_enabled: bool = Field(True, description="Enable text processing stage")
-    audio_generation_enabled: bool = Field(True, description="Enable audio generation stage")
-    image_generation_enabled: bool = Field(True, description="Enable image generation stage")
-    video_creation_enabled: bool = Field(True, description="Enable video creation stage")
-    youtube_upload_enabled: bool = Field(True, description="Enable YouTube upload stage")
-    
-    # Parallel processing
-    max_workers: int = Field(4, description="Maximum number of worker threads")
-    
-    # File management
-    keep_intermediate_files: bool = Field(False, description="Keep intermediate files after processing")
-    
-    class Config:
-        env_file = ".env"
-        env_prefix = "PIPELINE_"
-
-
 # Global settings instance
 settings = AppSettings()
-pipeline_settings = PipelineSettings()
-
-
-def get_settings() -> AppSettings:
-    """Get application settings."""
-    return settings
-
-
-def get_pipeline_settings() -> PipelineSettings:
-    """Get pipeline settings."""
-    return pipeline_settings
-
-
-def reload_settings():
-    """Reload settings from environment."""
-    global settings, pipeline_settings
-    settings = AppSettings()
-    pipeline_settings = PipelineSettings()
-    return settings, pipeline_settings
 
 
 if __name__ == "__main__":
