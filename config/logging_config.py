@@ -9,7 +9,7 @@ from typing import Dict, Any, Optional
 from datetime import datetime
 import json
 
-from .config import get_settings
+from .config import settings
 
 
 class StructuredFormatter(logging.Formatter):
@@ -92,18 +92,18 @@ def setup_logging(
         enable_json: Enable JSON structured logging
         log_file: Custom log file path
     """
-    settings = get_settings()
+    app_settings = settings
     
     # Use settings defaults if not provided
     if log_level is None:
-        log_level = settings.log_level.value
+        log_level = app_settings.log_level.value
     if log_format is None:
-        log_format = settings.log_format
+        log_format = app_settings.log_format
     if log_file is None:
-        log_file = settings.get_absolute_path(settings.logs_dir) / "bible_podcaster.log"
+        log_file = app_settings.get_absolute_path(app_settings.logs_dir) / "bible_podcaster.log"
     
     # Ensure logs directory exists
-    settings.create_directories()
+    app_settings.create_directories()
     
     # Configure logging
     config = {

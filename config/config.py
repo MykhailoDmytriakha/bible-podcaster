@@ -78,7 +78,18 @@ class AppSettings(BaseSettings):
     # Pipeline settings
     pipeline_timeout: int = Field(3600, description="Pipeline timeout in seconds")
     retry_attempts: int = Field(3, description="Number of retry attempts")
+    pipeline_text_processing_enabled: bool = Field(True, description="Enable text processing stage")
+    pipeline_audio_generation_enabled: bool = Field(True, description="Enable audio generation stage")
+    pipeline_image_generation_enabled: bool = Field(True, description="Enable image generation stage")
+    pipeline_video_creation_enabled: bool = Field(True, description="Enable video creation stage")
+    pipeline_youtube_upload_enabled: bool = Field(False, description="Enable YouTube upload stage")
+    pipeline_max_workers: int = Field(4, description="Max workers for parallel tasks (reserved)")
+    pipeline_keep_intermediate_files: bool = Field(False, description="Keep intermediate files after success")
     
+    # YouTube OAuth files
+    youtube_credentials_path: Optional[Path] = Field(None, description="Path to YouTube OAuth client_secret.json")
+    youtube_token_path: Optional[Path] = Field(None, description="Path to store OAuth token.json")
+
     # Web interface (optional)
     web_host: str = Field("localhost", description="Web interface host")
     web_port: int = Field(8000, description="Web interface port")

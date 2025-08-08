@@ -1,6 +1,12 @@
 import sys
 import argparse
 from text_processor import BiblicalContextAnalyzer, TextItem
+from audio_generator import ElevenLabsTTS
+from image_generator import SimpleCardGenerator
+from video_creator import SimpleVideoCreator
+from youtube_uploader import YouTubeUploader
+from config.logging_config import setup_logging
+from config.config import settings
 
 def run_biblical_context_analysis(input_text: str):
     print("\n\nRunning biblical context analysis...")
@@ -89,6 +95,30 @@ def create_context_enrichment_system(analysis_result: TextItem):
     print("Enrichment system placeholder - actual implementation needed")
     return analysis_result
 
+
+def run_pipeline(input_text: str):
+    setup_logging()
+    # 1) Text analysis
+    text_item = run_biblical_context_analysis(input_text)
+
+    # 2) Audio generation
+    tts = ElevenLabsTTS()
+    audio_item = tts.run(text_item)
+
+    # 3) Image generation
+    img_gen = SimpleCardGenerator()
+    image_item = img_gen.run(text_item)
+
+    # 4) Video creation
+    video_maker = SimpleVideoCreator()
+    video_item = video_maker.run((audio_item, image_item))
+
+    # 5) YouTube (MVP: write metadata only)
+    uploader = YouTubeUploader()
+    uploader.run(video_item)
+
+    print(f"\nPipeline completed. Video: {video_item.path}\n")
+
 def main():
     parser = argparse.ArgumentParser(
         description="Bible Podcaster Pipeline CLI: Analyze biblical thoughts and generate structured context. "
@@ -103,9 +133,7 @@ def main():
         print("Enter your biblical thought (end with Ctrl+D):")
         input_text = sys.stdin.read()
         
-    analysis_result = run_biblical_context_analysis(input_text)
-
-    enriched_result = create_context_enrichment_system(analysis_result)
+    run_pipeline(input_text)
 
 if __name__ == "__main__":
     main() 

@@ -20,6 +20,8 @@ opencv-python
 
 # Video Processing
 moviepy
+imageio
+imageio-ffmpeg
 
 # YouTube API
 google-api-python-client
