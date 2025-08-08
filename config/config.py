@@ -40,6 +40,7 @@ class AppSettings(BaseSettings):
     
     # API Keys
     openai_api_key: Optional[str] = Field(None, description="OpenAI API key")
+    openai_api_model: str = Field("gpt-4o-mini", description="OpenAI model to use")
     anthropic_api_key: Optional[str] = Field(None, description="Anthropic API key")
     elevenlabs_api_key: Optional[str] = Field(None, description="Eleven Labs API key")
     youtube_api_key: Optional[str] = Field(None, description="YouTube API key")
